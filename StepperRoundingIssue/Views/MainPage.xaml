@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StepperRoundingIssue.Views.MainPage">
+    <StackLayout Padding="20,20,20,20">
+        <Label Text="Material Renderer, increment=0.01"  FontAttributes="Bold" FontSize="Large"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Text="Start Value" />
+            <Label Text="{Binding TwoFractionValueMaterial, Mode=OneTime}" Grid.Column="1" />
+            <Label Text="Changed Value" Grid.Row="1" />
+            <Label Text="{Binding TwoFractionValueMaterial}" Grid.Row="1" Grid.Column="1" />
+            <Stepper Value="{Binding TwoFractionValueMaterial}" Increment="0.01" Visual="Material" Grid.Row="2" Grid.ColumnSpan="2"/>
+        </Grid>
+        <BoxView BackgroundColor="Silver" HorizontalOptions="FillAndExpand" HeightRequest="1"/>
+        <Label Text="Material Renderer, increment=0.1"  FontAttributes="Bold" FontSize="Large"/>
+        <Grid>
+            <Grid.ColumnDefinitions> 
+                <ColumnDefinition Width="160" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Text="Start Value" />
+            <Label Text="{Binding OneFractionValueMaterial, Mode=OneTime}" Grid.Column="1" />
+            <Label Text="Changed Value" Grid.Row="1" />
+            <Label Text="{Binding OneFractionValueMaterial}" Grid.Row="1" Grid.Column="1" />
+            <Stepper Value="{Binding OneFractionValueMaterial}" Increment="0.1" Visual="Material" Grid.Row="2" Grid.ColumnSpan="2" />
+        </Grid>
+        <BoxView BackgroundColor="Silver" HorizontalOptions="FillAndExpand" HeightRequest="1"/>
+        <Label Text="Default Renderer, increment=0.01"  FontAttributes="Bold" FontSize="Large"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Text="Start Value" />
+            <Label Text="{Binding TwoFractionValue, Mode=OneTime}" Grid.Column="1" />
+            <Label Text="Changed Value" Grid.Row="1" />
+            <Label Text="{Binding TwoFractionValue}" Grid.Row="1" Grid.Column="1" />
+            <Stepper Value="{Binding TwoFractionValue}" Increment="0.01" Grid.Row="2" Grid.ColumnSpan="2"/>
+        </Grid>
+        <BoxView BackgroundColor="Silver" HorizontalOptions="FillAndExpand" HeightRequest="1"/>
+        <Label Text="Default Renderer, increment=0.1"  FontAttributes="Bold" FontSize="Large"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Text="Start Value" />
+            <Label Text="{Binding OneFractionValue, Mode=OneTime}" Grid.Column="1" />
+            <Label Text="Changed Value" Grid.Row="1" />
+            <Label Text="{Binding OneFractionValue}" Grid.Row="1" Grid.Column="1" />
+            <Stepper Value="{Binding OneFractionValue}" Increment="0.1" Grid.Row="2" Grid.ColumnSpan="2"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>
